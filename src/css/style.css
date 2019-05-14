@@ -1,0 +1,16 @@
+.month_box{
+    margin: auto;
+    position: relative;
+    display: flex;
+    align-items: center; /*定义body的元素垂直居中*/
+    justify-content: center; /*定义body的里的元素水平居中*/
+    transition: .3s linear;
+    transform:rotate(0deg);
+    -webkit-transform:rotate(0deg);
+}
+.month_items{
+    
+    /* top: 25%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%); */
+}

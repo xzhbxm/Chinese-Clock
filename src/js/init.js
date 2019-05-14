@@ -1,9 +1,23 @@
-var timer = (new Date()).getTime();
-var timer2 = Date.now();
+var Clock_zh = function (params) {
+    this.$el = params.el;
+    this.DATA = {};//数据集合
+    this.create();
+}
 
-console.log(timer, timer2);
-console.log((new Date()).getDate());
+Clock_zh.prototype = {
+    create: function () {
+        this.DATA = {
+            DATA_MONTH: this.create_DATA('DATA_MONTH'),
+            DATA_DAY: this.create_DATA('DATA_DAY'),
+            DATA_WEEK: this.create_DATA('DATA_WEEK'),
+            DATA_HOUR: this.create_DATA('DATA_HOUR'),
+            DATA_MINUTE: this.create_DATA('DATA_MINUTE'),
+            DATA_SECOND: this.create_DATA('DATA_SECOND')
+        }
+        this.create_Html(this.$el);
 
-// (function (window, document, undefined) {
-
-// })(window, document, undefined)
+        
+        // this.initData();
+    },
+    
+}
