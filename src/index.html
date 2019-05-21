@@ -29,18 +29,25 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<input id="testInput" type="text" placeholder="参数" style="position: absolute;">
 	<div id="box"></div>
 
 	<script src="js/tool.js"></script>
 	<script src="js/init.js"></script>
 	<script src="js/create_Data.js"></script>
 	<script src="js/create_Html.js"></script>
+	<script src="js/update.js"></script>
 	
 	<script>
 		console.log(NumtoZh.TransformToChinese(11));
-		new Clock_zh({
+		var clock = new Clock_zh({
 			el: document.getElementById('box')
 		});
+		document.getElementById('testInput').addEventListener('keydown', function (e) {
+			if(e.keyCode == "13"){
+				clock.update({type:'updateMonth', val: this.value});
+			}
+		})
 	</script>
 </body>
 </html>
